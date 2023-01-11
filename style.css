@@ -1,0 +1,95 @@
+body {
+  background: rgba(0, 0, 0, 0);
+  margin: 0;
+}
+
+.BrowserSenkou {
+  min-width: 100svw;
+  min-height: 100svh;
+  background: #291533;
+  display: grid;
+  place-items: center;
+}
+
+.okoutate {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0;
+  height: 600px;
+}
+
+.okoutate:after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: -1;
+  content: "";
+  width: 280px;
+  height: 48px;
+  border-radius: 50%;
+  background: #7f7a8d;
+}
+
+.osenkouWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0;
+}
+
+.osenkouSmoke {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0;
+  margin: 0 0 -3px 0;
+}
+
+.osenkou {
+  display: block;
+  width: 6px;
+  height: 300px;
+  background: #26554c;
+  border-radius: 2px 2px 1px 1px;
+  color: rgba(0, 0, 0, 0);
+  position: relative;
+  z-index: 0;
+  margin: 0;
+  overflow: visible;
+}
+
+.osenkou:before {
+  z-index: 1;
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -6px);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(246, 102, 57, 0.3) 0%,
+    rgba(246, 102, 57, 0) 100%
+  );
+}
+
+.osenkou:after {
+  position: absolute;
+  z-index: 0;
+  content: "";
+  width: 100%;
+  height: 3px;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: #f55c2c;
+  border-radius: 2px 2px 0 0;
+}
